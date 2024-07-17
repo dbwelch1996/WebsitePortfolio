@@ -9,6 +9,7 @@
 /coverage
 
 /.vscode
+.env
 
 # production
 /build

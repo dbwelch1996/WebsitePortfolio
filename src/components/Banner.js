@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/dylanwgrad-23.jpeg";
+import headerImg from "../assets/img/gradphoto.png";
 
 export const Banner = () => {
   //This is all for the typing effect
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Software Engineer", "Network Engineer", "Full Stack Developer"];
+  const toRotate = ["Software Engineer", "Network Engineer", "Full Stack Developer", "Backend Engineer", "Systems Engineer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(50);
   const period = 2000;
@@ -54,9 +54,11 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Hello! Welcome to my Portfolio</span>
             <h1>
-              {"Dylan Welch\n"}
+               <span>Dylan Welch</span>
+            </h1>
+            <h1>
+              <span className="no-wrap">Aspring:</span><br />
               <span className="wrap">{text}</span>
             </h1>
             <p>
@@ -66,9 +68,9 @@ export const Banner = () => {
               and frameworks, particularly in the realms of network and software
               engineering.
             </p>
-            <button onClick={() => console.log("connect")}>
-              Let's connect <ArrowRightCircle size={25} />
-            </button>
+            <button onClick={() => window.location.hash = 'contact'}>
+  Let's connect <ArrowRightCircle size={25} />
+</button>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img" />
