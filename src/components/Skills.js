@@ -10,13 +10,11 @@ import python from "../assets/img/python.svg";
 import c from "../assets/img/c.svg";
 import spring from "../assets/img/spring.svg";
 
-
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 3
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -24,12 +22,20 @@ export const Skills = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 3
     }
+  };
+
+  const carouselOptions = {
+    responsive: responsive,
+    infinite: true,
+    autoPlay: true,
+    autoPlaySpeed: 2000, 
+    className: "skill-slider"
   };
 
   return (
@@ -38,43 +44,45 @@ export const Skills = () => {
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>
-                Skills
-              </h2>
-              <p>These is not an exhaustive list of skills.<br />These are to highlight the programming languages and technologies i've used throughout the years!</p>
-              <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                  <div className="item">
-                  <img src ={gitlogo} alt="Image" />
+              <h2>Skills</h2>
+              <p>
+                This is not an exhaustive list of skills.
+                <br />
+                These are to highlight the programming languages and technologies I've used throughout the years!
+              </p>
+              <Carousel {...carouselOptions}>
+                <div className="item">
+                  <img src={gitlogo} alt="Git" />
                   <h5>Git</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={javadark} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={javadark} alt="Java" />
                   <h5>Java</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={linuxdark} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={linuxdark} alt="Linux" />
                   <h5>Linux</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={sqldark} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={sqldark} alt="SQL" />
                   <h5>SQL</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={postman} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={postman} alt="Postman" />
                   <h5>Postman</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={python} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={python} alt="Python" />
                   <h5>Python</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={spring} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={spring} alt="Spring" />
                   <h5>Spring</h5>
-                 </div>
-                 <div className="item">
-                  <img src ={c} alt="Image" />
-                  <h5>C</h5>
-                 </div>
+                </div>
+                <div className="item">
+                  <img src={c} alt="C" />
+                  <h5>C</h5>  
+                </div>
               </Carousel>
             </div>
           </Col>
@@ -82,5 +90,4 @@ export const Skills = () => {
       </Container>
     </section>
   );
-  
-  }
+};

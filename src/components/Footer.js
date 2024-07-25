@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
@@ -37,7 +36,7 @@ export const Footer = () => {
             <br />
             <a href="#skills">Skills</a>
             <br />
-            <a href="#projects">Projects</a>
+            <a href="#project">Projects</a>
             <br />
             <a href="#contact">Contact</a>
           </Col>

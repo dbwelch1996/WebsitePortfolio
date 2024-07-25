@@ -33,7 +33,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" class="nav-logo"/>
+            <img src={logo} alt="Logo" className="nav-logo"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -59,9 +59,9 @@ export const NavBar = () => {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="#project"
                 className={
-                  activeLink === "projects"
+                  activeLink === "project"
                     ? "active navbar-link"
                     : "navbar-link"
                 }
